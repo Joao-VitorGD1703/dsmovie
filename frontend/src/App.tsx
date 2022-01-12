@@ -11,11 +11,11 @@ import  Navbar from "componentes/Navbar";
 function App () { 
   return  ( 
     < BrowserRouter > 
-      < Navbar  /> 
-      < Routes > 
-        < Route  path = "/" element={<Listing /> }/> 
-        < Route  path = "/form"> 
-          < Route  path= ":movieId " element={<Form />}/>
+      <Navbar  /> 
+      <Routes > 
+        <Route  path = "/" element={<Listing /> }/> 
+        <Route  path = "/form"> 
+          <Route  path= ":movieId" element={<Form />}/>
         </ Route > 
       </ Routes > 
     </ BrowserRouter > 
