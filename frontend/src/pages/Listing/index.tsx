@@ -29,6 +29,8 @@ function Listing() {
             });
 
     }, [pageNumber]);
+
+
 const handPageChange =(newPageNumber : number)=>{
     setPageNumber(newPageNumber);
 }
