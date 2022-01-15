@@ -20,21 +20,24 @@ function Listing() {
         numberOfElements: 0,
         empty: true
     });
-
+//`${BASE_URL}/movies?sizes=12&page=${pageNumber}
     useEffect(() => {
-        axios.get(`${BASE_URL}/movies?sizes=12&page=${pageNumber}`)
+        axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=id`)
             .then(response => {
                 const data = response.data as MoviePage;
                 setPage(data);
             });
 
     }, [pageNumber]);
-
+const handPageChange =(newPageNumber : number)=>{
+    setPageNumber(newPageNumber);
+}
 
 
     return (
         <>
-            <Pagination />
+
+            <Pagination page = { page } onChange = {handPageChange} />
 
             <div className="container">
                 <div className="row">

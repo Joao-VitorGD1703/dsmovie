@@ -3,11 +3,11 @@ import { Movie } from "types/movie";
 import MovieScore from "../MovieScore";
 
 
-type props = {
+type Props = {
     movie: Movie;
 }
 
-function MovieCard({movie} : props) {
+function MovieCard({movie} : Props) {
    
 
     return (
